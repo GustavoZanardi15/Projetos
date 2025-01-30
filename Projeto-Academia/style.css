@@ -1,0 +1,137 @@
+*{
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(img/hero-2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 30px 120px;
+}
+
+.logo img{
+    width: 120px;
+}
+
+.icon_navbar img{
+    width: 21px;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px 40px;
+}
+
+.icon_navbar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0px 10px;
+    cursor: pointer;
+}
+
+.navbar_link ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s; /* Transição para a cor */
+    opacity: 0.7;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+}
+
+.navbar_link ul li {
+    margin: 0 15px; /* Espaçamento entre os itens da lista */
+}
+
+.navbar_link ul li a {
+    color: white; /* Cor padrão do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.5s; /* Transição suave para a cor do link */
+}
+
+.navbar_link ul li a:hover {
+    color: yellow; /* Cor ao passar o mouse */
+}
+
+.lists{
+    margin: 0px 18px;
+    list-style: none;
+}
+
+.links{
+    text-decoration: none;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color:white;
+}
+
+.content_banner{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content_banner div{
+    width: 100%;
+}
+
+.content_banner .content{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px 0px;
+}
+
+.content h5{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: yellow;
+}
+
+.content h1{
+    font-size: 62px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    line-height: 82px;
+}
+
+.content h1 span{
+    color: yellow;
+}
+
+.content div a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 40%;
+    text-align: center;
+    text-transform: uppercase;
+    color: black; /* Cor padrão do texto */
+    background-color: yellow; /* Cor de fundo padrão */
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: background-color 0.5s, color 0.5s; /* Transições suaves para cor de fundo e texto */
+}
+
+.content div a:hover {
+    color: white; /* Cor do texto ao passar o mouse */
+    background-color: orange; /* Cor de fundo ao passar o mouse */
+}
