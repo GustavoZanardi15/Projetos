@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Press Start 2P, Arial, Helvetica, sans-serif;
 }
 .background {
 	height: 100vh;
@@ -27,7 +27,7 @@
 	left: 100vw;
 	height: 70vh;
 	width: 6vw;
-	background:radial-gradient(rgb(68, 171, 189) 50%, rgb(0, 30, 128));
+	background:radial-gradient(rgb(68, 171, 189) 50%, rgb(15, 1, 104));
 	border: 5px solid black;
 }
 .message {
@@ -50,7 +50,7 @@
 	position: fixed;
 	z-index: 10;
 	height: 10vh;
-	font-size: 10vh;
+	font-size: 5vh;
 	font-weight: 100;
 	color: white;
 	-webkit-text-stroke-width: 2px;
@@ -58,11 +58,14 @@
 	top: 0;
 	left: 0;
 	margin: 10px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Press Start 2P", serif;
+	
 }
+
 .score_val {
 	color: gold;
 	font-weight: bold;
+	text-shadow: 1px 1px 1px rgb(255, 251, 0), 0 0 1em rgb(2, 2, 2), 0 0 0.2em rgb(255, 208, 0);
 }
 @media only screen and (max-width: 1080px) {
     .message{
