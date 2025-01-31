@@ -34,11 +34,12 @@
 	position: absolute;
 	z-index: 10;
 	color: black;
-	top: 30%;
+	top: 50%;
 	left: 50%;
-	font-size: 4em;
+	font-size: 2em;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	font-family: "Press Start 2P", serif;
 }
 .messageStyle{
 	background: white;
@@ -46,6 +47,7 @@
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	border-radius: 5%;
 }
+
 .score {
 	position: fixed;
 	z-index: 10;
@@ -59,7 +61,6 @@
 	left: 0;
 	margin: 10px;
 	font-family: "Press Start 2P", serif;
-	
 }
 
 .score_val {
@@ -67,6 +68,28 @@
 	font-weight: bold;
 	text-shadow: 1px 1px 1px rgb(255, 251, 0), 0 0 1em rgb(2, 2, 2), 0 0 0.2em rgb(255, 208, 0);
 }
+
+.records {
+	position: fixed;
+	z-index: 10;
+	height: 4vh;
+	font-size: 4vh;
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 90vh;
+	left: 0;
+	margin: 10px;
+	font-family: "Press Start 2P", serif;
+}
+
+.record_val {
+	color: rgb(255, 238, 0);
+	font-weight: bold;
+	text-shadow: 1px 1px 1px white, 0 0 1em rgb(2, 2, 2), 0 0 0.2em rgb(253, 253, 251);
+}
+
 @media only screen and (max-width: 1080px) {
     .message{
 		font-size: 50px;
