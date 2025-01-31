@@ -11,6 +11,14 @@ let score_val = document.querySelector('.score_val');
 let message = document.querySelector('.message');
 let score_title = document.querySelector('.score_title');
 
+// Sistema de Recorde (High Score)
+let record_title = document.querySelector('.record_title');
+let record_val = document.querySelector('.record_val');
+
+let highScore = localStorage.getItem('highScore') || 0; // Recupera o recorde salvo
+record_title.innerHTML = "Recorde: ";
+record_val.innerHTML = highScore; // Exibe o recorde ao iniciar
+
 let game_state = 'Start';
 img.style.display = 'none';
 message.classList.add('messageStyle');
@@ -22,7 +30,7 @@ document.addEventListener('keydown', (e) => {
         bat.style.top = '40vh';
         game_state = 'Play';
         message.innerHTML = '';
-        score_title.innerHTML = 'Score : ';
+        score_title.innerHTML = 'Score: ';
         score_val.innerHTML = '0';
         message.classList.remove('messageStyle');
         play();
@@ -53,16 +61,24 @@ function play() {
                     bat_props.top + bat_props.height > pipe_props.top
                 ) {
                     game_state = 'End';
-                    message.innerHTML = 'Game Over'.fontcolor('red') + '<br>Press Enter To Restart';
+                    message.innerHTML = 'Game Over'.fontcolor('red') + '<br>Pressione enter para reiniciar';
                     message.classList.add('messageStyle');
                     img.style.display = 'none';
                     sound_die.play();
                     return;
                 } else {
                     if (pipe_props.right < bat_props.left && element.increase_score === '1') {
-                        score_val.innerHTML = parseInt(score_val.innerHTML) + 1;
+                        let newScore = parseInt(score_val.innerHTML) + 1;
+                        score_val.innerHTML = newScore;
                         element.increase_score = '0';
                         sound_point.play();
+
+                        // Atualiza o recorde se a pontuação atual for maior
+                        if (newScore > highScore) {
+                            highScore = newScore;
+                            localStorage.setItem('highScore', highScore); // Salva o recorde
+                            record_val.innerHTML = highScore; // Atualiza na tela
+                        }
                     }
                     element.style.left = pipe_props.left - move_speed + 'px';
                 }
@@ -79,7 +95,7 @@ function play() {
 
         if (parseFloat(bat.style.top) <= 0 || parseFloat(bat.style.top) + bat.clientHeight >= background.bottom) {
             game_state = 'End';
-            message.innerHTML = 'Game Over'.fontcolor('red') + '<br>Press Enter To Restart';
+            message.innerHTML = 'Game Over'.fontcolor('red') + '<br>Pressione enter para reiniciar';
             message.classList.add('messageStyle');
             img.style.display = 'none';
             sound_die.play();
