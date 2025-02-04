@@ -1,0 +1,172 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Configuração do fundo */
+header {
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.7); /* Melhor contraste */
+    position: fixed;
+    width: 100%;
+    height: 80px; /* Mantendo a altura original */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilização da Logo */
+.logo img {
+    height: 100%; /* Faz a logo ocupar toda a altura da navbar */
+    max-height: 120px; /* Evita que fique grande demais */
+    width: auto; /* Mantém a proporção */
+}
+/* Links da navbar */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+/* Estilização do formulário de pesquisa */
+.search-form {
+    display: flex;
+    border: 2px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-form input {
+    flex-grow: 1;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: text;
+}
+
+.search-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form button {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-form button i {
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.search-form button:hover i {
+    color: #f0a500;
+}
+
+/* Ícone do menu responsivo */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle i {
+        color: white;
+        font-size: 24px;
+    }
+}
+
+/* Texto centralizado */
+.hero {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #f0a500;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d88b00;
+}
