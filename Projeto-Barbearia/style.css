@@ -1,22 +1,28 @@
-/* Reset de estilos */
+/* Reset Geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Configuração do fundo */
+/* Header */
 header {
-    height: 100vh;
+    height: 120vh;
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding-top: 80px;
+}
+
+.body{
+    min-height: 500vh;
 }
 
 /* Navbar */
@@ -25,21 +31,20 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: rgba(0, 0, 0, 0.7); /* Melhor contraste */
+    background: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
-    height: 80px; /* Mantendo a altura original */
+    height: 80px;
     top: 0;
     z-index: 1000;
 }
 
-/* Estilização da Logo */
+/* Logo */
 .logo img {
-    height: 100%; /* Faz a logo ocupar toda a altura da navbar */
-    max-height: 120px; /* Evita que fique grande demais */
-    width: auto; /* Mantém a proporção */
+    max-height: 100px;
 }
-/* Links da navbar */
+
+/* Navbar Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -53,14 +58,14 @@ header {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     color: #f0a500;
 }
 
-/* Estilização do formulário de pesquisa */
+/* Formulário de Pesquisa */
 .search-form {
     display: flex;
     border: 2px solid white;
@@ -75,43 +80,74 @@ header {
     border: none;
     outline: none;
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.1);
-    cursor: text;
-}
-
-.search-form input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .search-form button {
     background: transparent;
     border: none;
-    padding: 5px;
+    padding: 8px;
     cursor: pointer;
 }
 
 .search-form button i {
     font-size: 16px;
     color: white;
-    transition: color 0.3s;
 }
 
 .search-form button:hover i {
     color: #f0a500;
 }
 
-/* Ícone do menu responsivo */
+/* Botão Responsivo */
 .menu-toggle {
     display: none;
+    cursor: pointer;
 }
 
+.menu-toggle i {
+    font-size: 24px;
+    color: white;
+}
+
+/* Hero */
+.hero h1 {
+    margin-top: 200px;
+    font-size: 48px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #f0a500;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #d88b00;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.9);
         position: absolute;
-        top: 60px;
+        top: 80px;
         right: 0;
         width: 200px;
         text-align: center;
@@ -124,49 +160,101 @@ header {
 
     .menu-toggle {
         display: block;
-        cursor: pointer;
-    }
-
-    .menu-toggle i {
-        color: white;
-        font-size: 24px;
     }
 }
 
-/* Texto centralizado */
-.hero {
+.services {
+    margin: 50px;
+    margin-bottom: 50px;
     text-align: center;
-    margin-top: auto;
-    padding: 20px;
+    padding: 50px;
+    background: #222;
+    color: white;
+    border-radius: 15px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-box {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.service-box:hover{
+    color:#da681c;
+}
+
+.service-box i {
+    font-size: 40px;
+    color: #f0a500;
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-box p {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
+    .services-container {
+        flex-direction: column; /* Empilha os serviços verticalmente */
+        align-items: center; /* Centraliza os itens */
     }
-    .hero p {
-        font-size: 18px;
+
+    .service-box {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        max-width: 300px; /* Limita a largura para não ficar muito grande */
     }
 }
 
-/* Botão */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #f0a500;
+footer {
+    background: #111;
+    color: white;
+    padding: 10px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: 0.3s;
+    font-size: 16px;
 }
 
-.btn:hover {
-    background: #d88b00;
+.footer-column ul li a:hover{
+    color: #f0a500;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
 }
