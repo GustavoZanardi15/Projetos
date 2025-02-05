@@ -22,7 +22,7 @@ header {
 }
 
 .body{
-    min-height: 500vh;
+    min-height: 300vh;
 }
 
 /* Navbar */
@@ -112,7 +112,7 @@ header {
 
 /* Hero */
 .hero h1 {
-    margin-top: 200px;
+    margin-top: 50px;
     font-size: 48px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
