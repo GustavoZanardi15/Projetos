@@ -1,217 +1,201 @@
 /* Reset Geral */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Remove todas as margens */
+    padding: 0; /* Remove todos os preenchimentos */
+    box-sizing: border-box; /* Faz com que o padding e a border sejam incluídos nas dimensões dos elementos */
+    font-family: 'Poppins', sans-serif; /* Define a fonte para todos os elementos */
 }
 
-/* Header */
+/* Ajuste do Header (Aumentando a altura da tela) */
 header {
-    height: 120vh;
-    background-image: url(images/background.jpg);
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 80px;
+    min-height: 110vh; /* Aumenta a altura do header para 110% da altura da tela */
+    background-image: url(images/background.jpg); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área do header */
+    background-position: center; /* Centraliza a imagem de fundo */
+    color: white; /* Define a cor do texto como branco */
+    display: flex; /* Usa o Flexbox para o layout */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    padding-top: 80px; /* Adiciona espaço superior */
+    position: relative; /* Define o posicionamento relativo do header */
 }
 
-.body{
-    min-height: 300vh;
+/* Ajuste do Hero (Empurrando a frase e o botão para baixo) */
+.hero {
+    display: flex; /* Usa o Flexbox para layout */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante disponível */
+    padding-top: 100px; /* Aumenta o espaço entre a navbar e o conteúdo */
+}
+
+.hero h1 {
+    font-size: 48px; /* Define o tamanho da fonte do título */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto */
+}
+
+.hero p {
+    font-size: 30px; /* Define o tamanho da fonte da frase */
+    color: white; /* Define a cor do texto como branco */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto */
+    margin-top: 20px; /* Adiciona margem superior entre a frase e o título */
+}
+
+/* Ajuste no botão */
+.btn {
+    margin-top: 50px; /* Adiciona um espaçamento maior entre a frase e o botão */
+    padding: 14px 30px; /* Define o preenchimento do botão */
+    background: #f0a500; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.btn:hover {
+    background: #d88b00; /* Altera a cor do fundo quando o botão é hover */
 }
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    top: 0;
-    z-index: 1000;
+    display: flex; /* Usa o Flexbox para organizar os itens da navbar */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    padding: 15px 50px; /* Define o preenchimento da navbar */
+    background: rgba(0, 0, 0, 0.8); /* Cor de fundo da navbar */
+    position: fixed; /* Deixa a navbar fixa no topo */
+    width: 100%; /* Faz a navbar ocupar 100% da largura */
+    height: 80px; /* Define a altura da navbar */
+    top: 0; /* Posiciona a navbar no topo da tela */
+    z-index: 1000; /* Garante que a navbar fique sobre outros elementos */
 }
 
 /* Logo */
 .logo img {
-    max-height: 100px;
+    max-height: 80px; /* Limita a altura máxima da imagem do logo */
 }
 
 /* Navbar Links */
 .nav-links {
-    list-style: none;
-    display: flex;
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os links na horizontal */
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 15px; /* Adiciona espaçamento entre os itens */
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: color 0.3s; /* Transição suave para a cor ao passar o mouse */
 }
 
 .nav-links a:hover {
-    color: #f0a500;
+    color: #f0a500; /* Altera a cor dos links ao passar o mouse */
 }
 
 /* Formulário de Pesquisa */
 .search-form {
-    display: flex;
-    border: 2px solid white;
-    border-radius: 20px;
-    overflow: hidden;
+    display: flex; /* Exibe o formulário de pesquisa em linha */
+    border: 2px solid white; /* Borda branca */
+    border-radius: 20px; /* Bordas arredondadas */
+    overflow: hidden; /* Impede que elementos saiam da área do formulário */
 }
 
 .search-form input {
-    flex-grow: 1;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.2);
+    flex-grow: 1; /* Faz o campo de input ocupar o máximo de espaço disponível */
+    color: white; /* Cor do texto no campo de pesquisa */
+    padding: 8px 15px; /* Define o preenchimento do campo */
+    border: none; /* Remove a borda */
+    outline: none; /* Remove o contorno ao clicar */
+    font-size: 16px; /* Tamanho da fonte do campo */
+    background: rgba(255, 255, 255, 0.2); /* Cor de fundo do campo */
 }
 
 .search-form button {
-    background: transparent;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
+    background: transparent; /* Fundo transparente no botão */
+    border: none; /* Remove a borda do botão */
+    padding: 8px; /* Adiciona o preenchimento no botão */
+    cursor: pointer; /* Altera o cursor para "mãozinha" */
 }
 
 .search-form button i {
-    font-size: 16px;
-    color: white;
+    font-size: 16px; /* Tamanho do ícone dentro do botão */
+    color: white; /* Cor do ícone */
 }
 
 .search-form button:hover i {
-    color: #f0a500;
+    color: #f0a500; /* Altera a cor do ícone ao passar o mouse */
 }
 
 /* Botão Responsivo */
 .menu-toggle {
-    display: none;
-    cursor: pointer;
+    display: none; /* Esconde o ícone de menu por padrão */
+    cursor: pointer; /* Altera o cursor para "mãozinha" */
 }
 
 .menu-toggle i {
-    font-size: 24px;
-    color: white;
+    font-size: 24px; /* Tamanho do ícone de menu */
+    color: white; /* Cor do ícone */
 }
 
-/* Hero */
-.hero h1 {
-    margin-top: 50px;
-    font-size: 48px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-    font-size: 30px;
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    margin-top: 10px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #f0a500;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #d88b00;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 200px;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
+/* Ajuste dos Serviços */
 .services {
-    margin: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    padding: 50px;
-    background: #222;
-    color: white;
-    border-radius: 15px;
+    margin-top: 50px; /* Adiciona espaço superior */
+    margin-bottom: 100px; /* Afastando os serviços do footer */
+    text-align: center; /* Centraliza o texto */
+    padding: 80px 20px; /* Adiciona preenchimento nos serviços */
+    background: #222; /* Cor de fundo dos serviços */
+    color: white; /* Cor do texto */
+    border-radius: 15px; /* Bordas arredondadas */
 }
 
 .services h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 32px; /* Tamanho da fonte do título dos serviços */
+    margin-bottom: 20px; /* Adiciona margem inferior */
 }
 
 .services-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    display: flex; /* Exibe os serviços em linha */
+    justify-content: center; /* Centraliza os serviços */
+    gap: 30px; /* Adiciona espaçamento entre os serviços */
 }
 
 .service-box {
-    background: #333;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
+    background: #333; /* Cor de fundo dos boxes de serviço */
+    padding: 20px; /* Preenchimento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 250px; /* Largura dos boxes */
+    text-align: center; /* Centraliza o conteúdo dentro do box */
 }
 
-.service-box:hover{
-    color:#da681c;
+.service-box:hover {
+    color: #da681c; /* Altera a cor do texto ao passar o mouse */
 }
 
 .service-box i {
-    font-size: 40px;
-    color: #f0a500;
-    margin-bottom: 10px;
+    font-size: 40px; /* Tamanho do ícone dentro do box */
+    color: #f0a500; /* Cor do ícone */
+    margin-bottom: 10px; /* Margem inferior no ícone */
 }
 
 .service-box h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 10px; /* Margem inferior no título */
+    font-size: 20px; /* Tamanho da fonte do título */
 }
 
 .service-box p {
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 14px; /* Tamanho da fonte da descrição */
+    opacity: 0.8; /* Opacidade para o texto */
 }
 
+/* Responsividade para Serviços */
 @media (max-width: 768px) {
     .services-container {
         flex-direction: column; /* Empilha os serviços verticalmente */
@@ -219,42 +203,66 @@ header {
     }
 
     .service-box {
-        width: 90%; /* Ocupa quase toda a largura da tela */
-        max-width: 300px; /* Limita a largura para não ficar muito grande */
+        width: 90%; /* Faz os boxes ocuparem quase toda a largura */
+        max-width: 300px; /* Limita a largura máxima */
     }
 }
 
+/* Ajuste do Footer */
 footer {
-    background: #111;
-    color: white;
-    padding: 10px;
+    background: #111; /* Cor de fundo do footer */
+    color: white; /* Cor do texto do footer */
+    padding: 40px 20px; /* Preenchimento interno do footer */
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* Exibe as colunas do footer em linha */
+    justify-content: space-around; /* Espaça igualmente as colunas */
 }
 
 .footer-column h3 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Margem inferior no título da coluna */
 }
 
 .footer-column ul {
-    list-style: none;
+    list-style: none; /* Remove os marcadores da lista */
 }
 
 .footer-column ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Tamanho da fonte */
 }
 
-.footer-column ul li a:hover{
-    color: #f0a500;
+.footer-column ul li a:hover {
+    color: #f0a500; /* Altera a cor dos links ao passar o mouse */
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
+    text-align: center; /* Centraliza o texto no rodapé */
+    margin-top: 20px; /* Margem superior */
+    font-size: 12px; /* Tamanho da fonte */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde os links de navegação por padrão */
+        flex-direction: column; /* Exibe os links em coluna */
+        background: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+        position: absolute; /* Posiciona os links de forma absoluta */
+        top: 80px; /* Alinha os links abaixo da navbar */
+        right: 0; /* Alinha os links à direita */
+        width: 200px; /* Define a largura da lista */
+        text-align: center; /* Centraliza o texto */
+        padding: 10px; /* Preenchimento interno */
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe os links quando a classe "active" é adicionada */
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o ícone de menu */
+    }
 }
