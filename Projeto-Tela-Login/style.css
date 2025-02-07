@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #000000, #14185a);
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.card-login{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(42, 70, 148);
+    width: 300px;
+    text-align: center;
+}
+
+.card-login h1{
+    margin-bottom: 20px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px -10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:hover{
+    border-color: #000000;
+    background-color: #e2e7f0;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #14185a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #120b24;
+}
