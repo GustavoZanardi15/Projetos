@@ -1,0 +1,86 @@
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Define o modelo de caixa para incluir bordas e preenchimentos no tamanho total */
+    font-family: Arial, sans-serif; /* Define a fonte como Arial */
+}
+
+body {
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura da tela inteira */
+    background-color: #282c36; /* Cor de fundo escura para a tela */
+}
+
+.calculator {
+    width: 300px; /* Largura fixa para a calculadora */
+    background: #1e1e1e; /* Cor de fundo escura para o contêiner da calculadora */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra ao redor da calculadora */
+}
+
+#display {
+    width: 100%; /* O display ocupa toda a largura disponível */
+    height: 50px; /* Altura fixa do display */
+    text-align: right; /* Alinha o texto à direita */
+    font-size: 1.5em; /* Tamanho da fonte aumentado */
+    padding: 10px; /* Espaçamento interno do display */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background: #333; /* Cor de fundo do display */
+    color: #fff; /* Cor do texto em branco */
+    margin-bottom: 10px; /* Espaçamento abaixo do display */
+}
+
+.buttons {
+    display: grid; /* Usa o modelo de layout em grade */
+    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas de largura igual */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+button {
+    width: 100%; /* Botões ocupam 100% da largura disponível */
+    height: 60px; /* Altura fixa para os botões */
+    font-size: 1.2em; /* Tamanho da fonte dos botões */
+    border: none; /* Remove as bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    background: #444; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto dos botões */
+    transition: 0.2s; /* Efeito de transição suave */
+}
+
+button:hover {
+    background: #666; /* Muda a cor de fundo quando o botão é passado por cima */
+}
+
+.operator {
+    background: #ff9500; /* Cor de fundo para botões de operadores */
+}
+
+.operator:hover {
+    background: #e08900; /* Cor de fundo para operadores ao passar o mouse */
+}
+
+.equal {
+    background: #28a745; /* Cor de fundo para o botão de igual */
+    grid-column: span 2; /* O botão ocupa duas colunas */
+}
+
+.equal:hover {
+    background: #218838; /* Cor de fundo ao passar o mouse no botão de igual */
+}
+
+/* O botão "0" agora fica abaixo do "+" e ocupa duas linhas de altura */
+.zero {
+    grid-column: span 2; /* O "0" ocupa duas colunas */
+    grid-row: span 2;     /* O "0" ocupa duas linhas */
+}
+
+/* O botão "." agora fica na posição correta */
+.dot {
+    grid-column: 4;       /* O ponto vai para a última coluna */
+    grid-row: 4;          /* Fica na última linha */
+}
