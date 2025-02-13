@@ -51,18 +51,17 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
     backdrop-filter: blur(10px);
-    width: 400px; /* Tamanho fixo do retângulo */
 }
 
 .clock span {
     display: inline-block;
-    width: 85px; /* Espaço fixo para cada número */
-    text-align: center;
+    font-size: 4rem;
+    color: #0ef;
+    text-shadow: 0 0 15px #0ef;
+    padding: 0 5px; /* Ajuste o espaço entre os números */
 }
 
 .clock span.separator {
-    width: auto; /* O separador não terá um tamanho fixo */
-    margin: 10px 15px; /* Espaço extra para separar os números */
+    font-size: 4rem;
+    margin: 0 10px; /* Espaço entre os números e os separadores */
 }
-
-
