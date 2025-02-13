@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.clock-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(14, 82, 87);
+    margin-bottom: 20px;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #0ef;
+    text-shadow: 0 0 15px #0ef;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+    backdrop-filter: blur(10px);
+    width: 400px; /* Tamanho fixo do retângulo */
+}
+
+.clock span {
+    display: inline-block;
+    width: 85px; /* Espaço fixo para cada número */
+    text-align: center;
+}
+
+.clock span.separator {
+    width: auto; /* O separador não terá um tamanho fixo */
+    margin: 10px 15px; /* Espaço extra para separar os números */
+}
+
+
